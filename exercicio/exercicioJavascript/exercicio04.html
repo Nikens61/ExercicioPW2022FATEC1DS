@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> exercicio04</title>
+    <style>
+    </style>
+</head>
+<body>
+    <p>Para mais informações e descrição dos exemplos, leia o código</p>
+    <h1>ONMOUSEOVER</h1>
+    <img onmouseover="ImgMax(this)" onmouseout="ImgNor(this)" border="0" src="https://i.pinimg.com/originals/9e/c0/02/9ec0026c5a03de6cf7d2bdd91a1b305d.gif" alt="hamster" width="340" height="400">
+    <br>
+    <p>Hamster fofo em uma colher, coloque o cursor sob o gif </p>
+
+    <div class="div-onfocus">
+        <h1>ONFOCUS</h1>
+        <p>Digite seu nome:</p>
+        <input type="text" onfocus="color_inp(this)">
+    </div>
+    
+   
+        <h1>ONCHANGE </h1>
+        <p>Você gosta de bolo? Escolha um sabor! </p>
+
+        <select id="cake_option" onchange="FucaoCh()">
+            <option value="morango">Morango</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="limao">Limão</option>
+        </select>
+        <p id="text"></p>
+</body>
+
+<script>
+
+//ONMOUSEOVER
+
+        function ImgMax(i){
+            i.style.height="570px";
+            i.style.width="510px";
+        }
+       //muda de tamanho
+        function ImgNor(i){
+            i.style.height="400px";
+            i.style.width="340px";
+        }
+        //ONFOCUS
+        //muda de cor quando clicado
+
+        function color_inp(x){
+            x.style.background='red'
+        }
+
+        //ONCHANGE
+
+        function FucaoCh(){
+            var sabor = document.getElementById("cake_option").value;
+
+            document.getElementById("text").innerHTML = "Legal, você gosta de " + sabor + " :)";
+        }
+         /*  logo depois do usuario informar sua escolha aparece uma mensagem em seguida. */
+
+</script>
+</html>

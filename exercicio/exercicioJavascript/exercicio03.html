@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio03</title>
+    <style>
+
+.quadro{
+    position: absolute;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    top: 1300px;
+}
+    </style>
+    
+</head>
+<body>
+    <div>
+        <h1>Exercicio de javascript</h1>
+    </div>
+    <div>
+        <h1 class="quadro">Exercicio de javascript</h1>
+    </div>
+    <hr>
+
+    <p>A tag document.getElementById serve para retornar um elemento do <br>DOM que é identificado por um ID específico.</p>
+    <div id="unico"></div>
+    
+    <hr>
+    
+    <p>A tag document.getElementsByClassName é uma lista viva do HTMLCollection de elementos encontrados. <br>pode ser invocado por qualquer elemento, não somente pelo nó raiz document.</p>
+    <div class=":)"></div>
+    <div class=":)"></div>
+    
+    
+    <hr>
+    
+    <p>O método getElementsByTagName da interface Document<br> retorna um HTMLCollection de elementos<br> com o nome da tag fornecido. O documento completo é pesquisado, incluindo o nó raiz.</p>
+
+    <p style="color:#FF7F50 ;">exemplo 01</p>
+    <p style="color:#FF7F50 ;">exemplo 02</p>
+    <p style="color:#FF7F50 ;">exemplo 03</p>
+
+    
+</body>
+<script >
+
+let div = document.getElementById("unico");
+let ClassDiv = document.getElementsByClassName(":)");
+
+
+div.style.width = "250px";
+div.style.height = "250px";
+div.style.backgroundColor = "#CCCCFF";
+div.innerHTML = "getElementById";
+
+ClassDiv[0].style.width = "250px";
+ClassDiv[0].style.height = "250px";
+ClassDiv[0].style.backgroundColor="#ffbbaa";
+ClassDiv[0].innerHTML="getElementsByClassName";
+
+ClassDiv[1].style.width = "250px";
+ClassDiv[1].style.height = "250px";
+ClassDiv[1].style.backgroundColor="#4682B4";
+ClassDiv[1].innerHTML="getElementsByClassName";
+
+var tagsP = document.getElementsByTagName("p");
+document.write(tagsP[3].innerHTML);
+document.write(tagsP[4].innerHTML);
+document.write(tagsP[5].innerHTML);
+document.write("<hr>")
+document.write("A funcao querySelectorAll() recebe um argumento de string contendo<br> um seletor CSS e retorna um objeto NodeList representando os elementos<br> do documento que correspondem ao seletor.<br> Se nenhum elemento coincide, a função retorna um objeto NodeList vazio.<br>");
+
+var h1 = document.querySelectorAll("h1");
+for (i=0;i<h1.length;i++){
+    h1[i].style.color="#0a0";
+    
+}
+
+
+
+</script>
+</html>
